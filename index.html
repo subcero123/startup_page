@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>お帰りなさい</title>
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script type="text/javascript" src="../nueva_web/scripts/time.js"></script>
+        <script type="text/javascript" src="../nueva_web/scripts/script.js"></script>
+        <script src="http://unpkg.com/kanji.js/dist/kanji.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <script type="text/javascript">
+			function show( show1 ) {
+			  document.getElementById(show1).style.display="block";
+			}
+			function hide( hide1 ) {
+			  document.getElementById(hide1).style.display="none";
+			}
+			function tog( tog1 ) {
+			  document.getElementById(tog1).style.backgroundColor="#777777";
+			}
+			function toh( toh1 ) {
+			  document.getElementById(toh1).style.backgroundColor="#ffffff";
+			}
+		</script>
+    </head>
+    <body>
+        <div class="maincontainer">
+            <div class="bottomcontainer">
+                <div class="button" id="btn1" onclick = "show('main1');hide('main2');tog('btn1');toh('btn2');"></div>
+				<div class="button" id="btn2" onclick = "show('main2');hide('main1');tog('btn2');toh('btn1');kanji_rnd('kanji','meanings');"></div>
+                <div class="marqueebar" id="marqueebar">
+					<marquee id="news1" class="marquee2"></marquee>
+				</div>
+				<div class="searchbar">
+					<form name="form1" action="http://google.com/search" target="_blank" method="get">
+						<input type="text" autocomplete="off" placeholder="google search..." name="q" class="searchinput">
+					</form>
+				</div>
+            </div>
+            <div class="time" id="time">
+                <script type="text/javascript">window.onload = date_time('time');</script>
+            </div>
+        </div>
+        <div class="main" id="main1">
+            <div class="sidebar" style="background-image: url('media/download%20(1).gif');"></div>
+            <div class="welcome">お帰りなさい</div>
+				<div class="bookmarkscontainer">
+					<ul>
+						<li><a href="https://www.facebook.com/" class="clink" target="_blank">facebook</a>
+						<li><a href="https://twitter.com/home" class="clink" target="_blank">twitter</a>
+						<li><a href="https://www.youtube.com/feed/subscriptions" class="clink" target="_blank">youtube</a>
+					</ul>
+					<ul>
+						<li><a href="https://www.reddit.com/" class="clink" target="_blank">reddit</a>
+						<li><a href="https://www.reddit.com/r/LearningJapanese/" class="clink" target="_blank">learningjp</a>
+                        <li><a href="https://www.reddit.com/r/unixporn/" class="clink" target="_blank">unixporn</a></li>
+                        
+					</ul>
+					<ul>
+                        <li><a href="https://libgen.is/" class="clink" target="_blank">libgen</a></li>
+                        <li><a href="https://solidtorrents.net/" class="clink" target="_blank">solidtorrent</a></li>
+                        <li><a href="https://rarbg.to/catalog/" class="clink" target="_blank">movies</a></li>
+						
+					</ul>
+					<ul>
+                        <li><a href="https://hyperskill.org/curriculum" class="clink" target="_blank">hyperskill</a></li>
+						<li><a href="https://www.freecodecamp.org/" class="clink" target="_blank">freecodecamp</a>
+                        <li><a href="https://theodinproject.com/dashboard" class="clink" target="_blank">odinproject</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="main" id="main2" style="display:none">
+				<div class="sidebar" style="background-image: url('media/download.gif');"></div>
+                <div class="kanji" id="kanji">
+                </div>
+                <div id="meanings">
+                </div>
+			</div>
+    </body>
+</html>
